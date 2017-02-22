@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel 5.4
+                    Laravel 5.4 jhvhgf
                 </div>
 
                 <div class="links">
