@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Sistema de Control Escolar</title>
+	<title>Sistema de Control escolar</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="{{asset("css/bootstrap.css")}}">
 </head>
@@ -16,7 +16,7 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	      <a class="navbar-brand" href="#"><b>S</b>CE</a>
+	      <a class="navbar-brand" href="#">Brand</a>
 	    </div>
 
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -24,7 +24,7 @@
 	        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
 	        <li><a href="#">Link</a></li>
 	        <li class="dropdown">
-	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Opciones <span class="caret"></span></a>
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
 	          <ul class="dropdown-menu" role="menu">
 	            <li><a href="#">Action</a></li>
 	            <li><a href="#">Another action</a></li>
@@ -47,24 +47,13 @@
 	      </ul>
 	    </div>
 	  </div>
+	  <div class="container"></div>
 	</nav>
-	
-	<div class="container">
-		@yield('titulo')
-		@yield('contenido')
-	</div>
-
-	<footer class="text-center">
+	<footer class="footer text-center">
 		<hr>
 		Ingeniería Web &copy; 2017
 	</footer>
 	<script src="{{asset("js/jquery-3.1.1.js")}}"></script>
-	<script src="{{asset("js/bootstrap.min.js")}}"></script>
+	<script src="{{asset("js/bootstrap.js")}}"></script>
 </body>
 </html>
-
-
-
-
-
-
