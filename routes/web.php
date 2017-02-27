@@ -15,8 +15,10 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/registrarAlumnos', 'alumnosController@registrarAlumnos');
+
 // Route::get('/', function () {
-//     return view('grupo2/master');
+//     return view('grupo2/home');
 // });
 
 

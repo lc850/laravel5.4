@@ -26,7 +26,7 @@
 	        <li class="dropdown">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Opciones <span class="caret"></span></a>
 	          <ul class="dropdown-menu" role="menu">
-	            <li><a href="#">Action</a></li>
+	            <li><a href="{{url('registrarAlumnos')}}">Registar Alumno</a></li>
 	            <li><a href="#">Another action</a></li>
 	            <li><a href="#">Something else here</a></li>
 	            <li class="divider"></li>
@@ -48,7 +48,7 @@
 	    </div>
 	  </div>
 	</nav>
-	
+
 	<div class="container">
 		@yield('titulo')
 		@yield('contenido')
