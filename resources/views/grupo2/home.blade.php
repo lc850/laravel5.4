@@ -1,4 +1,4 @@
-@extends('grupo2/master')
+@extends('master')
 
 @section('contenido')
 <div class="jumbotron">

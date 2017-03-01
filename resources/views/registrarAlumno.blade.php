@@ -7,7 +7,8 @@
 
 @section('contenido')
 <div class="col-xs-12">
-	<form action="">
+	<form action="{{url('/guardarAlumno')}}" method="POST">
+		<input type="hidden" name="_token" value="{{ csrf_token() }}">
 		<div class="form-group">
 			<label for="nombre">Nombre:</label>
 			<input name="nombre" type="text" placeholder="Teclea nombre" class="form-control" required>
@@ -38,6 +39,8 @@
 			<label for="correo">Correo:</label>
 			<input name="correo" type="email" placeholder="Teclea e-mail" class="form-control" required>
 		</div>
+		<button type="submit" class="btn btn-primary">Registrar</button>
+		<a href="{{url('/')}}" class="btn btn-danger">Cancelar</a>
 	</form>
 </div>
 @stop
