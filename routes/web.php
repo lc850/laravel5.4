@@ -19,7 +19,15 @@ Route::get('/registrarAlumnos', 'alumnosController@registrarAlumnos');
 
 Route::get('/consultarAlumnos', 'alumnosController@consultarAlumnos');
 
-Route::post('/guardarAlumno', 'alumnosController@guardarAlumno');	
+Route::post('/guardarAlumno', 'alumnosController@guardarAlumno');
+
+Route::get('/eliminarAlumno/{id}', 'alumnosController@eliminarAlumno');	
+
+Route::get('editarAlumno/{id}', 'alumnosController@editarAlumno');
+
+Route::post('actualizarAlumno/{id}', 'alumnosController@actualizarAlumno');
+
+Route::get('alumnosPDF', 'alumnosController@alumnosPDF');
 
 //Rutas del grupo de 14-15
 
