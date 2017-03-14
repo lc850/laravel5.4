@@ -29,6 +29,8 @@ Route::post('actualizarAlumno/{id}', 'alumnosController@actualizarAlumno');
 
 Route::get('alumnosPDF', 'alumnosController@alumnosPDF');
 
+Route::get('carreraAlumnosPDF/{id}', 'alumnosController@carreraAlumnosPDF');
+
 //Rutas del grupo de 14-15
 
 Route::get('/grupo2', function () {

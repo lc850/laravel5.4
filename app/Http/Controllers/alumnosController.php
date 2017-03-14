@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Alumno;
+use App\Carrera;
+use DB;
 
 class alumnosController extends Controller
 {
@@ -24,7 +26,11 @@ class alumnosController extends Controller
     }
 
     public function consultarAlumnos() {
-        $alumnos=Alumno::paginate(5);
+        $alumnos=DB::table('alumnos')
+            ->join('carreras', 'alumnos.id_carrera', '=', 'carreras.id')
+            ->select('alumnos.*', 'carreras.nombre AS carrera')
+            ->paginate(5);
+
         return view('consultarAlumnos', compact('alumnos'));
     }
 
@@ -58,6 +64,17 @@ class alumnosController extends Controller
         $dompdf=\App::make('dompdf.wrapper');
         $dompdf->loadHTML($vista);
         return $dompdf->stream('reporte.pdf');
+    }
+
+        public function carreraAlumnosPDF($id){
+        $alumnos=DB::table('alumnos')
+            ->where('id_carrera', '=', $id)
+            ->get();
+        $carrera=Carrera::find($id);
+        $vista=view('carreraAlumnosPDF', compact('alumnos', 'carrera'));
+        $dompdf=\App::make('dompdf.wrapper');
+        $dompdf->loadHTML($vista);
+        return $dompdf->stream('lista.pdf');
     }
 }
 

@@ -38,7 +38,9 @@
 					Masculino
 					@endif
 				</td>
-				<td>{{$a->carrera}}</td>
+				<td>
+					<a href="{{url('carreraAlumnosPDF')}}/{{$a->id_carrera}}" target="_blank">{{$a->carrera}}</a>
+				</td>
 				<td>{{$a->correo}}</td>
 				<td>
 					<a href="{{url('/editarAlumno')}}/{{$a->id}}" class="btn btn-xs btn-primary">
